@@ -1,0 +1,30 @@
+.head{
+    display:grid;
+    grid-template-columns: 6fr 6fr;
+    justify-content:  space-between;
+    align-items: center;
+    margin-left:30px;
+}
+.short{
+    display:grid;
+    grid-template-columns: 6fr 6fr;
+    justify-content: space-around;
+    margin-left: 180px;
+}
+nav{
+    background-color: aliceblue;
+    position: sticky;
+    top:0;
+    z-index: 50;
+    border-radius: 10px;
+}
+h2{
+    margin-left: 50px;
+    font-family: arial;
+}
+table{
+    background-color:aliceblue ;
+}
+a{
+    text-decoration: none;
+}

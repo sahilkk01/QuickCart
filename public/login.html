@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        main{
+            background-color: grey;
+            width:400px;
+            height:200px;
+            margin: 180px 0px 0px 400px;
+            padding:30px;
+            border-radius: 10px;
+        }
+        .head{
+            text-align: center;
+            font-size: 30px;
+            font-family: arial;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color:white;
+        }
+        input{
+            width:350px;
+            height:30px;
+            margin:0px 0px 10px 40px;
+            border-radius: 5px;
+            background-color: rgb(191, 198, 193);
+        }
+        button{
+            width:150px;
+            height:30px;
+            margin:0px 0px 10px 100px;
+            text-align: center;
+            background-color: rgb(94, 108, 108);
+            color:beige;
+        }
+        button:hover{
+            background-color:rgb(180, 202, 180);
+        }
+        .bi-arrow-left{
+            padding:4px;
+            background-color: rgb(191, 198, 193);
+            border-radius: 5px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+          <div class="head">Login to QuickCart </div>
+        <form>
+                <input type="text"  id="x"  placeholder="Enter your Email or Mobile to login">
+                <input type="password" id="y" placeholder="Password">
+            <button type="button" onclick="userlogin()">Submit</button>
+        </form>
+        <a href="index.html" class="bi bi-arrow-left">Home</a>
+    </main>
+     <script src="../src/script/login.js"></script>
+</body>
+</html>
