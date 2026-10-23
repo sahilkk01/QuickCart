@@ -48,6 +48,81 @@
         a{
             text-decoration: none;
         }
+
+
+        /* Responsive Login Page */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    min-height: 200px;
+    margin: 100px auto 0;
+    padding: 30px 20px;
+}
+
+input {
+    width: 100%;
+    max-width: 350px;
+    height: 35px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+button {
+    width: 150px;
+    height: 35px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.head {
+    font-size: 30px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    main {
+        margin-top: 80px;
+        max-width: 420px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    main {
+        width: 100%;
+        margin: 60px auto 0;
+        padding: 25px 15px;
+    }
+
+    .head {
+        font-size: 25px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    button {
+        width: 140px;
+    }
+}
     </style>
 </head>
 <body>
