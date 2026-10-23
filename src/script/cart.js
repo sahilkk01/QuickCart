@@ -1,15 +1,29 @@
-function addToCart(name, price) {
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let table = document.getElementById("cartItems");
+let total = 0;
 
-    let product = {
-        name: name,
-        price: price
-    };
+cart.forEach(function(product) {
+    let subtotal = product.price * product.quantity;
+    total = total + subtotal;
 
-    cart.push(product);
+    table.innerHTML += `
+        <tr>
+            <td>${product.name}</td>
+            <td>₹${product.price}</td>
+            <td>${product.quantity}</td>
+            <td>₹${subtotal}</td>
+        </tr>
+    `;
+});
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+document.getElementById("totalPrice").innerText = "Total: ₹" + total;
 
-    alert(name + " added to cart!");
+function emptyCart() {
+    localStorage.removeItem("cart");
+
+    document.getElementById("cartItems").innerHTML = "";
+    document.getElementById("totalPrice").innerText = "Total: ₹0";
+
+    alert("Cart is empty!");
 }
