@@ -28,3 +28,123 @@ table{
 a{
     text-decoration: none;
 }
+
+
+
+
+
+/* ===== Responsive Cart Page ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.head {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-left: 0;
+    padding: 15px;
+}
+
+nav {
+    width: 100%;
+}
+
+/* Cart items */
+.short {
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    gap: 15px;
+    margin-left: 0;
+    padding: 15px;
+}
+
+/* Headings */
+h2 {
+    margin-left: 20px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+    .head {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .short {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+    .head {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 12px;
+    }
+
+    .short {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    h2 {
+        margin-left: 10px;
+        font-size: 21px;
+    }
+
+    /* Allow wide cart tables to scroll horizontally */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    input,
+    button,
+    select {
+        max-width: 100%;
+    }
+}
