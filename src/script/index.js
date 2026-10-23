@@ -17,6 +17,7 @@ function press(){
   alert("Logout Successful");
 }
 
+
 let cart=JSON.parse(localStorage.getItem("cart")) || [];
 function buy(item,price){
     let product=cart.find(p=>p.name===item);
@@ -35,3 +36,4 @@ function buy(item,price){
     alert(`${item} is saved to cart`);
     console.log(cart);
 }
+
