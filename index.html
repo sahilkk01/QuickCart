@@ -1,239 +1,429 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>QuickCart</title>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="./src/style/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./src/style/style.css">
 </head>
+
 <body>
+
+    <!-- Navigation -->
     <nav>
         <div class="head">
-        <div class="logo">
-            <div>
-            <img src="../public/image/screen.png" width="100%" height="40px">
+
+            <div class="logo">
+                <div>
+                    <img src="./public/image/screen.png"
+                         width="100%"
+                         height="40"
+                         alt="QuickCart Logo">
+                </div>
+                <div class="brand">QuickCart</div>
             </div>
-            <div class="brand">QuickCart</div>
-        </div>
-        <div class="list">
-        <div class="x"><a href="#Home">Home</a></div>
-        <div class="x">Food</div>
-        <div class="x">Grocery</div>
-        <div class="x">Beverages</div>
-        <div class="x">Offers</div>
-        </div>
-        <div class="shortcuts">
-            <div class="bi bi-search"></div>
-            <div class="bi bi-heart" title="favourite"></div>
-            <div><a href="public\cart.html" class="bi bi-bag" title="Cart"></a></div>
-            <a href="public\login.html" id="loginUser" class="log">Login</a>
-        </div>
+
+            <div class="list">
+                <div class="x"><a href="#Home">Home</a></div>
+                <div class="x">Food</div>
+                <div class="x">Grocery</div>
+                <div class="x">Beverages</div>
+                <div class="x">Offers</div>
+            </div>
+
+            <div class="shortcuts">
+                <div class="bi bi-search"></div>
+                <div class="bi bi-heart" title="Favourite"></div>
+
+                <div>
+                    <a href="./public/cart.html"
+                       class="bi bi-bag"
+                       title="Cart"></a>
+                </div>
+
+                <a href="./public/login.html"
+                   id="loginUser"
+                   class="log">Login</a>
+            </div>
+
         </div>
     </nav>
+
+    <!-- Main Content -->
     <main id="Home">
+
+        <!-- Hero Section -->
         <section>
-        <article class="article1">
-            <div class="prop">Fresh Groceries and Daily Essentials.<br>
-                Choose from 5000+ farm-fresh organic.
-            </div>
-            <form>
-            <div class="search" onclick="search()" id="find"><input type="text" placeholder="Search items"></div>
-            <button type="submit" class="submit">Find Food</button>
-            </form>
-        </article>
+            <article class="article1">
+
+                <div class="prop">
+                    Fresh Groceries and Daily Essentials.<br>
+                    Choose from 5000+ farm-fresh organic.
+                </div>
+
+                <form>
+                    <div class="search" id="find">
+                        <input type="text" placeholder="Search items">
+                    </div>
+
+                    <button type="submit" class="submit">
+                        Find Food
+                    </button>
+                </form>
+
+            </article>
         </section>
+
+        <!-- Categories -->
         <section>
             <h2>Shop by Category</h2>
+
             <div class="category" onclick="clickCategory()">
+
                 <div class="short">
-                   <div class="items"><img src="../public/image/images.jpg" width="100" height="100" class="photo"></div>
-                    <div>Fruits & Greens</div>
+                    <div class="items">
+                        <img src="./public/image/images.jpg"
+                             width="100"
+                             height="100"
+                             class="photo"
+                             alt="Fruits and Greens">
+                    </div>
+                    <div>Fruits &amp; Greens</div>
                 </div>
+
                 <div class="short">
-                    <div class="items"><img src="../public/image/images (1).jpg" width="100" height="100" class="photo"></div>
-                    <div>Dairy & Bakeries</div>
+                    <div class="items">
+                        <img src="./public/image/images%20(1).jpg"
+                             width="100"
+                             height="100"
+                             class="photo"
+                             alt="Dairy and Bakeries">
+                    </div>
+                    <div>Dairy &amp; Bakeries</div>
                 </div>
+
                 <div class="short">
-                    <div class="items"><img src="../public/image/image(3).jpg" width="100" height="100" class="photo"></div>
+                    <div class="items">
+                        <img src="./public/image/image(3).jpg"
+                             width="100"
+                             height="100"
+                             class="photo"
+                             alt="Cold Beverages">
+                    </div>
                     <div>Cold Beverages</div>
                 </div>
+
                 <div class="short">
-                <div class="items"><img src="../public/image/image(2).jpg" width="100" height="100" class="photo" ></div>
-                <div>Snacks & Bites</div>
+                    <div class="items">
+                        <img src="./public/image/image(2).jpg"
+                             width="100"
+                             height="100"
+                             class="photo"
+                             alt="Snacks and Bites">
+                    </div>
+                    <div>Snacks &amp; Bites</div>
                 </div>
+
                 <div class="short">
-                <div class="items"><img src="../public/image/image(4).jpg" width="100" height="100" class="photo" ></div>
-                <div>Pantry & Staples</div>
+                    <div class="items">
+                        <img src="./public/image/image(4).jpg"
+                             width="100"
+                             height="100"
+                             class="photo"
+                             alt="Pantry and Staples">
+                    </div>
+                    <div>Pantry &amp; Staples</div>
                 </div>
+
                 <div class="short">
-                <div class="items"><img src="../public/image/image(5).jpg" width="100" height="100" class="photo" ></div>
-                <div>Gourmet Meals</div>
+                    <div class="items">
+                        <img src="./public/image/image(5).jpg"
+                             width="100"
+                             height="100"
+                             class="photo"
+                             alt="Gourmet Meals">
+                    </div>
+                    <div>Gourmet Meals</div>
                 </div>
+
             </div>
         </section>
+
+        <!-- Flash Deals -->
         <h2>Flash deals</h2>
+
         <section class="cards">
+
             <div class="card">
                 <div class="card-header">
-                    <img src="../public/image/card1.jpg" width="150" height="100" class="car">
-                    <span class="bi bi-star-fill">4.9 (128)</span>
+                    <img src="./public/image/card1.jpg"
+                         width="150"
+                         height="100"
+                         class="car"
+                         alt="Organic Cherries">
+
+                    <span class="bi bi-star-fill"> 4.9 (128)</span>
                 </div>
+
                 <div class="card-body">
-                 <span>Farm Organic Cherry</span>
+                    <span>Farm Organic Cherry</span>
                 </div>
+
                 <div class="card-footer">
-                 <strike>$3.49</strike> $2.37
-                 <span class="bi bi-plus">Add</span>
+                    <strike>$3.49</strike> $2.37
+                    <span class="bi bi-plus"> Add</span>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-header">
-                    <img src="../public/image/card2.jpg" width="150" height="100" class="car">
-                    <span class="bi bi-star-fill">4.8 (84)</span>
+                    <img src="./public/image/card2.jpg"
+                         width="150"
+                         height="100"
+                         class="car"
+                         alt="Almond Milk">
+
+                    <span class="bi bi-star-fill"> 4.8 (84)</span>
                 </div>
+
                 <div class="card-body">
-                 <span>Barista Oil and Almond Milk</span>
+                    <span>Barista Oil and Almond Milk</span>
                 </div>
+
                 <div class="card-footer">
-                <strike>$4.99</strike> $3.29
-                <span class="bi bi-plus">Add</span>
+                    <strike>$4.99</strike> $3.29
+                    <span class="bi bi-plus"> Add</span>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-header">
-                    <img src="../public/image/card3.jpg" width="150" height="100" class="car">
-                    <span class="bi bi-star-fill">5.0 (312)</span>
+                    <img src="./public/image/card3.jpg"
+                         width="150"
+                         height="100"
+                         class="car"
+                         alt="Ginger Elixir">
+
+                    <span class="bi bi-star-fill"> 5.0 (312)</span>
                 </div>
+
                 <div class="card-body">
-                 <span>Raw Ginger Immunity Elixir</span>
+                    <span>Raw Ginger Immunity Elixir</span>
                 </div>
+
                 <div class="card-footer">
-                <strike>$4.25</strike> $3.40
-                <span class="bi bi-plus">Add</span>
+                    <strike>$4.25</strike> $3.40
+                    <span class="bi bi-plus"> Add</span>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-header">
-                    <img src="../public/image/card4.jpg" width="150" height="100" class="car">
-                    <span class="bi bi-star-fill">4.7 (64)</span>
+                    <img src="./public/image/card4.jpg"
+                         width="150"
+                         height="100"
+                         class="car"
+                         alt="Avocados">
+
+                    <span class="bi bi-star-fill"> 4.7 (64)</span>
                 </div>
+
                 <div class="card-body">
-                 <span>Ready to eat Hass-Avocados</span>
+                    <span>Ready to eat Hass-Avocados</span>
                 </div>
+
                 <div class="card-footer">
-                <strike>$5.99</strike> $4.49
-                <span class="bi bi-plus">Add</span>
+                    <strike>$5.99</strike> $4.49
+                    <span class="bi bi-plus"> Add</span>
                 </div>
             </div>
+
         </section>
+
+        <!-- Promotional Banners -->
         <article class="article2">
-                <div class="shade1">
-                <div class="art1">Get 50% Off on first order.</div>
+
+            <div class="shade1">
+                <div class="art1">
+                    Get 50% Off on first order.
                 </div>
-                <div class="shade2">
-                <div class="art2">Fresh Farm Milk and artisnal cheeses
-                    <span>Directly bottled every morning at sunrise from local certifiedpasture meadows</span>
+            </div>
+
+            <div class="shade2">
+                <div class="art2">
+                    Fresh Farm Milk and artisanal cheeses
+
+                    <span>
+                        Directly bottled every morning at sunrise
+                        from local certified pasture meadows
+                    </span>
                 </div>
-                </div>
+            </div>
+
         </article>
+
+        <!-- Bestselling Essentials -->
         <h2>Bestselling Essentials</h2>
+
         <div class="second-card">
-        <div class="card">
-            <div class="card-header">
-               <img src="../public/image/card5.jpg" width="150px" height="100px">
-               <span class="bi bi-star-fill">4.9 (420)</span>
-            </div>
-            <div class="card-body">
-                Sweet cherry Tomatto on vines
 
-            </div>
-            <div class="card-footer">
-              $3.89
-              <span class="bi bi-plus">Add</span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-               <img src="../public/image/card6.jpg" width="150px" height="100px">
-               <span class="bi bi-star-fill">5.0 (210)</span>
-            </div>
-            <div class="card-body">
-                Slow-Fermented San Fransisco
+            <div class="card">
+                <div class="card-header">
+                    <img src="./public/image/card5.jpg"
+                         width="150"
+                         height="100"
+                         alt="Cherry Tomatoes">
 
-            </div>
-            <div class="card-footer">
-              $4.95   
-              <span class="bi bi-plus">Add</span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-               <img src="../public/image/card7.jpg" width="150px" height="100px">
-               <span class="bi bi-star-fill">4.9 (530)</span>
-            </div>
-            <div class="card-body">
-                Pasture Raised Organic Eggs
+                    <span class="bi bi-star-fill"> 4.9 (420)</span>
+                </div>
 
-            </div>
-            <div class="card-footer">
-              $ 5.40
-              <span class="bi bi-plus">Add</span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-               <img src="../public/image/card8.jpg" width="150px" height="100px">
-               <span class="bi bi-star-fill">4.8(195)</span>
-            </div>
-            <div class="card-body">
-                First Cold Pressed olive Oil
+                <div class="card-body">
+                    Sweet cherry Tomato on vines
+                </div>
 
+                <div class="card-footer">
+                    $3.89
+                    <span class="bi bi-plus"> Add</span>
+                </div>
             </div>
-            <div class="card-footer">
-              $ 12.90
-              <span class="bi bi-plus">Add</span>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./public/image/card6.jpg"
+                         width="150"
+                         height="100"
+                         alt="Sourdough Bread">
+
+                    <span class="bi bi-star-fill"> 5.0 (210)</span>
+                </div>
+
+                <div class="card-body">
+                    Slow-Fermented San Francisco
+                </div>
+
+                <div class="card-footer">
+                    $4.95
+                    <span class="bi bi-plus"> Add</span>
+                </div>
             </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./public/image/card7.jpg"
+                         width="150"
+                         height="100"
+                         alt="Organic Eggs">
+
+                    <span class="bi bi-star-fill"> 4.9 (530)</span>
+                </div>
+
+                <div class="card-body">
+                    Pasture Raised Organic Eggs
+                </div>
+
+                <div class="card-footer">
+                    $5.40
+                    <span class="bi bi-plus"> Add</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./public/image/card8.jpg"
+                         width="150"
+                         height="100"
+                         alt="Olive Oil">
+
+                    <span class="bi bi-star-fill"> 4.8 (195)</span>
+                </div>
+
+                <div class="card-body">
+                    First Cold Pressed Olive Oil
+                </div>
+
+                <div class="card-footer">
+                    $12.90
+                    <span class="bi bi-plus"> Add</span>
+                </div>
+            </div>
+
         </div>
-        </div>
+
     </main>
+
+    <!-- Footer -->
     <footer>
         <div class="foot">
+
             <div class="foot1">
-                <img src="../public/image/screen.png" width="100" height="50"><br>
-                Delivering fresh organic Groceries,daily essentials and,<br>
-                chef-cureted meals straight to your doorstep in minutes. 
+                <img src="./public/image/screen.png"
+                     width="100"
+                     height="50"
+                     alt="QuickCart Logo">
+
+                <br>
+
+                Delivering fresh organic Groceries, daily essentials and,
+                <br>
+                chef-curated meals straight to your doorstep in minutes.
             </div>
+
             <div>
                 <dl>
                     <dt>Categories</dt>
-                        <dd>Fresh Vagitables</dd>
-                        <dd>Organic fruits</dd>
-                        <dd>Cold Bevarage</dd>
-                        <dd>Pantry Staples</dd>
-                        <dd>Weekly deals</dd>
+                    <dd>Fresh Vegetables</dd>
+                    <dd>Organic Fruits</dd>
+                    <dd>Cold Beverages</dd>
+                    <dd>Pantry Staples</dd>
+                    <dd>Weekly Deals</dd>
                 </dl>
             </div>
+
             <div>
                 <dl>
                     <dt>Customer Services</dt>
                     <dd>Track Your Order</dd>
                     <dd>Returns and Refunds</dd>
-                    <dd>Help center and FAQ</dd>
+                    <dd>Help Center and FAQ</dd>
                     <dd>Contact Support</dd>
                 </dl>
             </div>
+
             <div>
                 <dl>
                     <dt>Stay Updated</dt>
-                    <dd>Get coupons and fresh grocery arrival directly in your inbox.</dd>
-                    <dd><input type="email" placeholder="Your email address">
-                    <button>Subscribe</button></dd>
+
+                    <dd>
+                        Get coupons and fresh grocery arrivals
+                        directly in your inbox.
+                    </dd>
+
+                    <dd>
+                        <input type="email"
+                               placeholder="Your email address">
+
+                        <button type="button">Subscribe</button>
+                    </dd>
                 </dl>
-                <button class="logout" onclick="press()">Logout</button>
+
+                <button class="logout"
+                        type="button"
+                        onclick="press()">Logout</button>
             </div>
+
         </div>
     </footer>
-    <script src="src\script\index.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="./src/script/index.js"></script>
+
 </body>
 </html>
