@@ -3,7 +3,7 @@ function userlogin(){
  var b=document.getElementById("y").value;
  if (a==="Admin" && b==="admin123"){
     localStorage.setItem("user",a);
-  window.location.href="index.html";
+  window.location.href="../index.html";
  }
  else{
   alert("Invalid Id & Password") ;
