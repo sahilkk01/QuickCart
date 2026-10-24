@@ -4,21 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.product-card {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 80px;
+    box-sizing: border-box;
+}
+
+.product-card:hover {
+    background-color: antiquewhite;
+}
+
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+
+.product-card button {
+    padding: 10px 15px;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+a:hover {
+    background-color: rgb(176, 181, 168);
+    color: white;
+}
+
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    gap: 15px;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid grey;
+}
+
+
+nav span {
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-left: 0;
+    background-color: white;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    font-family: sans-serif;
+}
+
+
+@media (max-width: 900px) {
+    #products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .product-card img {
+        height: 140px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .product-card {
+        padding: 8px;
+        margin-top: 70px;
+    }
+
+    .product-card img {
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .product-card p {
+        font-size: 12px;
+    }
+
+    .product-card button {
+        width: 100%;
+        padding: 8px 3px;
+        font-size: 12px;
+    }
+
+    nav {
+        gap: 5px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    nav span {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 6px 3px;
+        font-size: 12px;
+    }
+}
+
+    </style>
 </head>
 <body>
-    <div class="product-card">
+    <nav>
+        <span id="categoryTitle">Products</span>
+        <a href="../index.html">Home Page</a>
+        <a href="../public/cart.html">Cart</a>
+    </nav>
 
-    <img src="none" alt="Headphones">
+<div id="products"></div>
 
-    <h3>Wireless Headphones</h3>
-
-    <p>₹1499</p>
-
-    <button onclick="addToCart('Wireless Headphones', 1499)">
-        Add to Cart
-    </button>
-
-</div>
+<script src="../src/script/products.js"></script>
 </body>
-<script src="../js/cart.js"></script>
 </html>
