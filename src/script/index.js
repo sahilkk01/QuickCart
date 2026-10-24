@@ -37,3 +37,6 @@ function buy(item,price){
     console.log(cart);
 }
 
+function showCategory(category){
+    window.location.href="./public/products.html?category=" + encodeURIComponent(category);
+}
